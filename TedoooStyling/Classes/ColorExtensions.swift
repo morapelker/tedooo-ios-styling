@@ -9,7 +9,7 @@ import Foundation
 
 public extension UIColor {
     
-    public convenience init(hex: String) {
+    convenience init(hex: String) {
         let r, g, b: CGFloat
 
         if hex.hasPrefix("#") {
@@ -33,7 +33,7 @@ public extension UIColor {
         self.init(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
-    public static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red / 255, green: green / 255, blue: blue / 255, alpha: 1.0)
     }
     
@@ -47,11 +47,11 @@ public extension UIColor {
         return Int(arc4random_uniform(UInt32(max - m))) + m
     }
     
-    public static func getRandomColor() -> UIColor {
+    static func getRandomColor() -> UIColor {
         return UIColor.rgb(red: CGFloat(random(max: 255)), green: CGFloat(random(max: 255)), blue: CGFloat(random(max: 255)))
     }
     
-    public func isLight(threshold: Float = 0.5) -> Bool? {
+    func isLight(threshold: Float = 0.5) -> Bool? {
         let originalCGColor = self.cgColor
 
         // Now we need to convert it to the RGB colorspace. UIColor.white / UIColor.black are greyscale and not RGB.
@@ -66,5 +66,14 @@ public extension UIColor {
 
         let brightness = Float(((components[0] * 299) + (components[1] * 587) + (components[2] * 114)) / 1000)
         return (brightness > threshold)
+    }
+}
+
+
+public extension UIViewController {
+    func hideKeyboardWhenTappedAround(selector: Selector = #selector(UIViewController.dismissKeyboard)) {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: selector)
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 }
