@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-extension UIView {
-    func addGestureRecognizer(target: Any, selector: Selector, shouldClear: Bool = false) {
+public extension UIView {
+     func addGestureRecognizer(target: Any, selector: Selector, shouldClear: Bool = false) {
         if shouldClear {
             clearGestureRecognizers()
         }
