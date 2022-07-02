@@ -1,0 +1,29 @@
+# TedoooStyling
+
+[![CI Status](https://img.shields.io/travis/morapelker/TedoooStyling.svg?style=flat)](https://travis-ci.org/morapelker/TedoooStyling)
+[![Version](https://img.shields.io/cocoapods/v/TedoooStyling.svg?style=flat)](https://cocoapods.org/pods/TedoooStyling)
+[![License](https://img.shields.io/cocoapods/l/TedoooStyling.svg?style=flat)](https://cocoapods.org/pods/TedoooStyling)
+[![Platform](https://img.shields.io/cocoapods/p/TedoooStyling.svg?style=flat)](https://cocoapods.org/pods/TedoooStyling)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+## Installation
+
+TedoooStyling is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'TedoooStyling'
+```
+
+## Author
+
+morapelker, morapelker@gmail.com
+
+## License
+
+TedoooStyling is available under the MIT license. See the LICENSE file for more info.
